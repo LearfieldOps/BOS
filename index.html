@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Schedules Directory</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        .schedule-link { 
+            display: block; 
+            padding: 10px; 
+            margin: 5px 0; 
+            background: #f4f4f4; 
+            text-decoration: none; 
+            color: #333; 
+            border-left: 5px solid #007bff;
+        }
+        .schedule-link:hover { background: #e9e9e9; }
+    </style>
+</head>
+<body>
+    <h1>Current Schedules</h1>
+    <div id="file-list">Checking for new schedules...</div>
+
+    <script>
+        // Edit these two lines with your info
+        const username = 'LearfieldOps';
+        const repo = 'BOS';
+
+        async function fetchSchedules() {
+            const container = document.getElementById('file-list');
+            try {
+                const response = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/Schedules`);
+                const files = await response.json();
+                
+                container.innerHTML = ''; // Clear the loading text
+
+                files.forEach(file => {
+                    if (file.name.endsWith('.html')) {
+                        const link = document.createElement('a');
+                        link.href = `Schedules/${file.name}`;
+                        link.className = 'schedule-link';
+                        // Makes "monday-ops.html" look like "Monday Ops"
+                        link.innerText = file.name.replace('.html', '').replace(/-/g, ' ');
+                        container.appendChild(link);
+                    }
+                });
+            } catch (e) {
+                container.innerText = "Error loading schedules.";
+            }
+        }
+        fetchSchedules();
+    </script>
+</body>
+</html>
