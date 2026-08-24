@@ -1,0 +1,703 @@
+<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Board Op Schedule for September 5 - September 11</title><style>body { font-family: 'Segoe UI', Arial, sans-serif; margin: 30px; background: #f8f9fa; } h1 { color: #2c3e50; text-align: center; margin-bottom: 5px; } .timestamp-label { text-align: center; color: #7f8c8d; margin-bottom: 2px; font-size: 13px; } table { width: 100%; border-collapse: collapse; background: white; border: 2px solid #333; } th { background: #2c3e50 !important; color: white !important; padding: 12px; border: 1px solid #444; } td { border: 1px solid #999; padding: 12px; } .sep { background: #34495e; color: white; font-weight: bold; text-align: center; } .daily-notes-row { background: #fff3cd; } .note-row { background: #f2f4f5; font-size: 13px; } .note-label { background: #dee2e6; font-weight: bold; text-align: right; } .controls { background: white; padding: 15px; border: 1px solid #ccc; border-radius: 6px; display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 20px; } select { padding: 8px; font-size: 16px; font-weight: bold; }</style></head><body><h1>Board Op Schedule for September 5 - September 11</h1><div class='timestamp-label'>Last Saved: 8/24/2026, 11:16 AM</div><div class='controls'><label>Filter by Name:</label><select id='opFilter' onchange='filterTable()'><option value=''>-- View All Schedule --</option><option value='Adam Morrison'>Adam Morrison</option><option value='Blaze Gilzow'>Blaze Gilzow</option><option value='Bobby Blackburn'>Bobby Blackburn</option><option value='Brett Otto'>Brett Otto</option><option value='Brock Bashore'>Brock Bashore</option><option value='Caden Schmitz'>Caden Schmitz</option><option value='Carson Wakeland'>Carson Wakeland</option><option value='CJ Herold'>CJ Herold</option><option value='Cody Mackey'>Cody Mackey</option><option value='Collin Drews'>Collin Drews</option><option value='Dalton Farris'>Dalton Farris</option><option value='Dan Kvist'>Dan Kvist</option><option value='Daniel Anderson'>Daniel Anderson</option><option value='Darin McDermott'>Darin McDermott</option><option value='David Jordan'>David Jordan</option><option value='Dillon Riggs'>Dillon Riggs</option><option value='Derek Wood'>Derek Wood</option><option value='Drake Picard'>Drake Picard</option><option value='Ethan Sargent'>Ethan Sargent</option><option value='Giovanni Miller'>Giovanni Miller</option><option value='Hayden Burks'>Hayden Burks</option><option value='Hunter Stuenkel'>Hunter Stuenkel</option><option value='Iysha Jackson'>Iysha Jackson</option><option value='Jacob Scott'>Jacob Scott</option><option value='Jerry Kelly'>Jerry Kelly</option><option value='Kale Rollins'>Kale Rollins</option><option value='Keaton Brightwell'>Keaton Brightwell</option><option value='Lacey Williams'>Lacey Williams</option><option value='Michael Tackett'>Michael Tackett</option><option value='Morgyn Woods'>Morgyn Woods</option><option value='Nate Strope'>Nate Strope</option><option value='Ross Campbell'>Ross Campbell</option><option value='Ryan Klahr'>Ryan Klahr</option><option value='Ryan Williams'>Ryan Williams</option><option value='Serenity Blunt'>Serenity Blunt</option><option value='Shelley Kofsky'>Shelley Kofsky</option><option value='Steven A Scott'>Steven A Scott</option><option value='Tabor Mayes'>Tabor Mayes</option><option value='Tony Oneill'>Tony Oneill</option><option value='Ty Kiesling'>Ty Kiesling</option><option value='Zach Aughtman'>Zach Aughtman</option></select><label style='margin-left:20px;'>Filter by Calendar:</label><select id='calendarFilter' onchange='filterTable()'><option value=''>-- View All Calendars --</option><option value='Alabama Crimson Tide Rewind Show'>Alabama Crimson Tide Rewind Show</option><option value='Alabama Football'>Alabama Football</option><option value='Alabama Football Show'>Alabama Football Show</option><option value='Colorado Football Show'>Colorado Football Show</option><option value='CSC-Talk Radio'>CSC-Talk Radio</option><option value='Houston Football'>Houston Football</option><option value='Houston Football Show'>Houston Football Show</option><option value='Indiana Football'>Indiana Football</option><option value='Indiana Football Show'>Indiana Football Show</option><option value='Iowa Football'>Iowa Football</option><option value='Iowa Football Show'>Iowa Football Show</option><option value='Iowa State Football'>Iowa State Football</option><option value='Iowa State Football Show'>Iowa State Football Show</option><option value='Kansas Crimson and Blue Show - Football'>Kansas Crimson and Blue Show - Football</option><option value='Kansas Football'>Kansas Football</option><option value='Kansas Football - Spanish'>Kansas Football - Spanish</option><option value='Kansas Football Show'>Kansas Football Show</option><option value='Kansas State Football'>Kansas State Football</option><option value='Kansas State Football - Spanish'>Kansas State Football - Spanish</option><option value='Kansas State Football Show'>Kansas State Football Show</option><option value='Louisville Football'>Louisville Football</option><option value='Louisville Football Show'>Louisville Football Show</option><option value='Minnesota Football Show'>Minnesota Football Show</option><option value='Minnesota Volleyball'>Minnesota Volleyball</option><option value='Mizzou Football'>Mizzou Football</option><option value='Mizzou Football Show'>Mizzou Football Show</option><option value='Montana Football'>Montana Football</option><option value='Montana Football Show'>Montana Football Show</option><option value='Montana State Football'>Montana State Football</option><option value='Montana State Football Show'>Montana State Football Show</option><option value='Oklahoma Coaches Corner Show'>Oklahoma Coaches Corner Show</option><option value='Oklahoma Football Show'>Oklahoma Football Show</option><option value='Oklahoma Huddle Show'>Oklahoma Huddle Show</option><option value='Oklahoma Press Conference'>Oklahoma Press Conference</option><option value='Oklahoma State Football'>Oklahoma State Football</option><option value='Oklahoma State Football Show'>Oklahoma State Football Show</option><option value='Oklahoma State Women's Soccer'>Oklahoma State Women's Soccer</option><option value='Oklahoma State Women's Soccer Show'>Oklahoma State Women's Soccer Show</option><option value='Oregon State Football'>Oregon State Football</option><option value='Purdue Volleyball'>Purdue Volleyball</option><option value='Texas Tech Football'>Texas Tech Football</option><option value='Texas Tech Football Show'>Texas Tech Football Show</option><option value='Wisconsin Athletic Director Show'>Wisconsin Athletic Director Show</option><option value='Wisconsin Football'>Wisconsin Football</option><option value='Wisconsin Football Show'>Wisconsin Football Show</option><option value='Wyoming Football'>Wyoming Football</option><option value='Wyoming Football Show'>Wyoming Football Show</option></select></div><table id="mainTable"> 
+            <thead> 
+                <tr> 
+                    <th class="col-game">Game / Show</th> 
+                    <th class="col-date">Date</th> 
+                    <th class="col-start">Start</th> 
+                    <th class="col-arrival">Arrival</th> 
+                    <th class="col-op">Board Op</th> 
+                    <th class="col-notes">Notes</th> 
+                     
+                </tr> 
+            </thead> 
+            <tbody> <tr><td colspan="6" class="sep" data-date="09-05-2026">Saturday, September 5</td></tr>        <tr class="daily-notes-row" data-date="09-05-2026">
+            <td class="note-label" style="text-align:center;">Daily Notes:</td>
+            <td colspan="5" class="save-text" style="text-align:left;"></td>
+            
+        </tr>        <tr data-date="09-05-2026" data-calendar="Alabama Football"> 
+            <td class="save-text col-game">Alabama vs. East Carolina (FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Sat, Sep. 5th">Sat, Sep. 5th</td> 
+            <td class="save-text time-input col-start">8:00 AM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">7:00 AM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Jerry Kelly</span></div>
+                <div class="op-wrapper" style="display: flex; align-items: center; margin-top: 4px;"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Brock Bashore</span></div>
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-05-2026" data-calendar="Oregon State Football"> 
+            <td class="save-text col-game">Oregon State @ Houston (FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Sat, Sep. 5th">Sat, Sep. 5th</td> 
+            <td class="save-text time-input col-start">9:00 AM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">8:00 AM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Tabor Mayes</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-05-2026" data-calendar="Indiana Football"> 
+            <td class="save-text col-game">Indiana vs. North Texas (FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Sat, Sep. 5th">Sat, Sep. 5th</td> 
+            <td class="save-text time-input col-start">10:00 AM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">9:00 AM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Daniel Anderson</span></div>
+                <div class="op-wrapper" style="display: flex; align-items: center; margin-top: 4px;"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Serenity Blunt</span></div>
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-05-2026" data-calendar="Houston Football"> 
+            <td class="save-text col-game">Houston vs. Oregon State (FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Sat, Sep. 5th">Sat, Sep. 5th</td> 
+            <td class="save-text time-input col-start">10:00 AM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">9:00 AM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Dan Kvist</span></div>
+                
+            </td> 
+            <td class="save-text col-notes">First FB Game</td> 
+             
+        </tr>         <tr data-date="09-05-2026" data-calendar="Iowa State Football"> 
+            <td class="save-text col-game">Iowa State vs. Southeast Missouri (FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Sat, Sep. 5th">Sat, Sep. 5th</td> 
+            <td class="save-text time-input col-start">10:00 AM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">9:00 AM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Kale Rollins</span></div>
+                <div class="op-wrapper" style="display: flex; align-items: center; margin-top: 4px;"><span style="font-weight: bold; display: block; margin-bottom: 2px;">CJ Herold</span></div>
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-05-2026" data-calendar="Montana Football"> 
+            <td class="save-text col-game">Montana vs. Drake (FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Sat, Sep. 5th">Sat, Sep. 5th</td> 
+            <td class="save-text time-input col-start">12:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">11:00 AM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Ryan Williams</span></div>
+                
+            </td> 
+            <td class="save-text col-notes">First FB Game</td> 
+             
+        </tr>         <tr data-date="09-05-2026" data-calendar="Oklahoma State Football"> 
+            <td class="save-text col-game">Oklahoma State @ Tulsa (FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Sat, Sep. 5th">Sat, Sep. 5th</td> 
+            <td class="save-text time-input col-start">12:45 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">11:45 AM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Bobby Blackburn</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-05-2026" data-calendar="Iowa Football"> 
+            <td class="save-text col-game">Iowa vs. Northern Illinois (FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Sat, Sep. 5th">Sat, Sep. 5th</td> 
+            <td class="save-text time-input col-start">1:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">12:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Morgyn Woods</span></div>
+                <div class="op-wrapper" style="display: flex; align-items: center; margin-top: 4px;"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Caden Schmitz</span></div>
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-05-2026" data-calendar="Wyoming Football"> 
+            <td class="save-text col-game">Wyoming @ Colorado State University (FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Sat, Sep. 5th">Sat, Sep. 5th</td> 
+            <td class="save-text time-input col-start">3:30 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">2:30 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Jacob Scott</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-05-2026" data-calendar="Kansas State Football"> 
+            <td class="save-text col-game">K State vs. Nicholls (FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Sat, Sep. 5th">Sat, Sep. 5th</td> 
+            <td class="save-text time-input col-start">4:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">3:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Lacey Williams</span></div>
+                <div class="op-wrapper" style="display: flex; align-items: center; margin-top: 4px;"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Giovanni Miller</span></div>
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-05-2026" data-calendar="Texas Tech Football"> 
+            <td class="save-text col-game">Texas Tech vs. Abilene Christian (FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Sat, Sep. 5th">Sat, Sep. 5th</td> 
+            <td class="save-text time-input col-start">5:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">4:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Derek Wood</span></div>
+                
+            </td> 
+            <td class="save-text col-notes">First FB Game at TTU</td> 
+             
+        </tr>                  <tr data-date="09-05-2026" data-calendar="Montana State Football"> 
+            <td class="save-text col-game">Montana State vs. Butler (FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Sat, Sep. 5th">Sat, Sep. 5th</td> 
+            <td class="save-text time-input col-start">6:30 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">5:30 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Carson Wakeland</span></div>
+                
+            </td> 
+            <td class="save-text col-notes">First FB Game</td> 
+             
+        </tr>         <tr data-date="09-05-2026" data-calendar="Manual Event"><td class="save-text col-game">Floater</td><td class="save-text date-input col-date" data-orig="Sat, Sep. 5th">Sat, Sep. 5th</td><td class="save-text time-input col-start">11am-7pm</td><td class="arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;"></td><td class="col-op op-container"><div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Tony Oneill</span></div></td><td class="save-text col-notes"></td></tr><tr data-date="09-05-2026" data-calendar="Manual Event"><td class="save-text col-game">Floater</td><td class="save-text date-input col-date" data-orig="Sat, Sep. 5th">Sat, Sep. 5th</td><td class="save-text time-input col-start">3pm-11pm</td><td class="arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;"></td><td class="col-op op-container"><div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Dillon Riggs</span></div></td><td class="save-text col-notes"></td></tr><tr data-date="09-05-2026" data-calendar="Manual Event"><td class="save-text col-game">Floater</td><td class="save-text date-input col-date" data-orig="Sat, Sep. 5th">Sat, Sep. 5th</td><td class="save-text time-input col-start">1pm,-5pm</td><td class="arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;"></td><td class="col-op op-container"><div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Dalton Farris</span></div></td><td class="save-text col-notes"></td></tr><tr class="note-row" data-date="09-05-2026"> 
+            <td class="col-game">
+                
+            </td> 
+            <td class="note-label">
+                Producer:<br>
+                
+            </td> 
+            <td class="prod-container">
+                <div class="prod-wrapper"><span style="font-weight: normal; display: block; margin-bottom: 2px; color: rgb(204, 204, 204);">Unassigned</span></div>
+            </td> 
+            <td class="note-label">
+                Studio 6:<br>
+                
+            </td> 
+            <td colspan="2" class="studio6-container">
+                <div class="studio6-wrapper"><span style="font-weight: normal; display: block; margin-bottom: 2px; color: rgb(204, 204, 204);">Unassigned</span></div>
+            </td> 
+             
+        </tr> <tr><td colspan="6" class="sep" data-date="09-06-2026">Sunday, September 6</td></tr>        <tr class="daily-notes-row" data-date="09-06-2026">
+            <td class="note-label" style="text-align:center;">Daily Notes:</td>
+            <td colspan="5" class="save-text" style="text-align:left;"></td>
+            
+        </tr>                          <tr data-date="09-06-2026" data-calendar="Wisconsin Football"> 
+            <td class="save-text col-game">Wisconsin vs. Notre Dame (FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Sun, Sep. 6th">Sun, Sep. 6th</td> 
+            <td class="save-text time-input col-start">4:30 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">3:30 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Iysha Jackson</span></div>
+                <div class="op-wrapper" style="display: flex; align-items: center; margin-top: 4px;"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Serenity Blunt</span></div>
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-06-2026" data-calendar="Louisville Football"> 
+            <td class="save-text col-game">Louisville vs. Ole Miss (FB @ Nashville, TN)</td> 
+            <td class="save-text date-input col-date" data-orig="Sun, Sep. 6th">Sun, Sep. 6th</td> 
+            <td class="save-text time-input col-start">5:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">4:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Ross Campbell</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr class="note-row" data-date="09-06-2026"> 
+            <td class="col-game">
+                
+            </td> 
+            <td class="note-label">
+                Producer:<br>
+                
+            </td> 
+            <td class="prod-container">
+                <div class="prod-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Tony Oneill</span></div>
+            </td> 
+            <td class="note-label">
+                Studio 6:<br>
+                
+            </td> 
+            <td colspan="2" class="studio6-container">
+                <div class="studio6-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Dillon Riggs</span></div>
+            </td> 
+             
+        </tr> <tr><td colspan="6" class="sep" data-date="09-07-2026">Monday, September 7</td></tr>        <tr class="daily-notes-row" data-date="09-07-2026">
+            <td class="note-label" style="text-align:center;">Daily Notes:</td>
+            <td colspan="5" class="save-text" style="text-align:left;">LABOR DAY (All schools CLOSED)</td>
+            
+        </tr>        <tr data-date="09-07-2026" data-calendar="CSC-Talk Radio"> 
+            <td class="save-text col-game">CSC-Talk Radio Show</td> 
+            <td class="save-text date-input col-date" data-orig="Mon, Sep. 7th">Mon, Sep. 7th</td> 
+            <td class="save-text time-input col-start">10:06 AM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">9:06 AM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Ross Campbell</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-07-2026" data-calendar="Alabama Crimson Tide Rewind Show"> 
+            <td class="save-text col-game">Crimson Tide Rewind (Alabama FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Mon, Sep. 7th">Mon, Sep. 7th</td> 
+            <td class="save-text time-input col-start">6:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">5:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Jerry Kelly</span></div>
+                <div class="op-wrapper" style="display: flex; align-items: center; margin-top: 4px;"><span style="font-weight: bold; display: block; margin-bottom: 2px;">CJ Herold</span></div>
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-07-2026" data-calendar="Oklahoma Huddle Show"> 
+            <td class="save-text col-game">OU Huddle with Chris Plank &amp; Teddy Lehman</td> 
+            <td class="save-text date-input col-date" data-orig="Mon, Sep. 7th">Mon, Sep. 7th</td> 
+            <td class="save-text time-input col-start">6:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">5:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Bobby Blackburn</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-07-2026" data-calendar="Kansas Football Show"> 
+            <td class="save-text col-game">Hawk Talk with Lance Leipold (KU FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Mon, Sep. 7th">Mon, Sep. 7th</td> 
+            <td class="save-text time-input col-start">6:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">5:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Hayden Burks</span></div>
+                <div class="op-wrapper" style="display: flex; align-items: center; margin-top: 4px;"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Caden Schmitz</span></div>
+            </td> 
+            <td class="save-text col-notes">Late Arrival.&nbsp;</td> 
+             
+        </tr>         <tr data-date="09-07-2026" data-calendar="Oklahoma Football Show"> 
+            <td class="save-text col-game">Sooner Sports Talk (Oklahoma FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Mon, Sep. 7th">Mon, Sep. 7th</td> 
+            <td class="save-text time-input col-start">7:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">6:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Bobby Blackburn</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr class="note-row" data-date="09-07-2026"> 
+            <td class="col-game">
+                
+            </td> 
+            <td class="note-label">
+                Producer:<br>
+                
+            </td> 
+            <td class="prod-container">
+                <div class="prod-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Tony Oneill</span></div>
+            </td> 
+            <td class="note-label">
+                Studio 6:<br>
+                
+            </td> 
+            <td colspan="2" class="studio6-container">
+                <div class="studio6-wrapper"><span style="font-weight: normal; display: block; margin-bottom: 2px; color: rgb(204, 204, 204);">Unassigned</span></div>
+            </td> 
+             
+        </tr> <tr><td colspan="6" class="sep" data-date="09-08-2026">Tuesday, September 8</td></tr>        <tr class="daily-notes-row" data-date="09-08-2026">
+            <td class="note-label" style="text-align:center;">Daily Notes:</td>
+            <td colspan="5" class="save-text" style="text-align:left;">State Tech OFF</td>
+            
+        </tr>        <tr data-date="09-08-2026" data-calendar="CSC-Talk Radio"> 
+            <td class="save-text col-game">CSC-Talk Radio Show</td> 
+            <td class="save-text date-input col-date" data-orig="Tue, Sep. 8th">Tue, Sep. 8th</td> 
+            <td class="save-text time-input col-start">10:06 AM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">9:06 AM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Michael Tackett</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-08-2026" data-calendar="Oklahoma Press Conference"> 
+            <td class="save-text col-game">OU Football Press Conference</td> 
+            <td class="save-text date-input col-date" data-orig="Tue, Sep. 8th">Tue, Sep. 8th</td> 
+            <td class="save-text time-input col-start">11:30 AM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">10:30 AM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Darin McDermott</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-08-2026" data-calendar="Minnesota Football Show"> 
+            <td class="save-text col-game">Gopher Football Weekly with PJ Fleck (Minnesota FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Tue, Sep. 8th">Tue, Sep. 8th</td> 
+            <td class="save-text time-input col-start">12:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">11:00 AM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Michael Tackett</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-08-2026" data-calendar="Louisville Football Show"> 
+            <td class="save-text col-game">Coach Brohm Radio Show (Louisville FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Tue, Sep. 8th">Tue, Sep. 8th</td> 
+            <td class="save-text time-input col-start">6:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">5:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Ross Campbell</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-08-2026" data-calendar="Iowa State Football Show"> 
+            <td class="save-text col-game">Cyclone Coaches Corner (Iowa State FBCS)</td> 
+            <td class="save-text date-input col-date" data-orig="Tue, Sep. 8th">Tue, Sep. 8th</td> 
+            <td class="save-text time-input col-start">6:30 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">5:30 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Kale Rollins</span></div>
+                <div class="op-wrapper" style="display: flex; align-items: center; margin-top: 4px;"><span style="font-weight: bold; display: block; margin-bottom: 2px;">CJ Herold</span></div>
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>                  <tr data-date="09-08-2026" data-calendar="Mizzou Football Show"> 
+            <td class="save-text col-game">Tiger Talk (Mizzou FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Tue, Sep. 8th">Tue, Sep. 8th</td> 
+            <td class="save-text time-input col-start">7:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">6:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Dillon Riggs</span></div>
+                <div class="op-wrapper" style="display: flex; align-items: center; margin-top: 4px;"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Giovanni Miller</span></div>
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr class="note-row" data-date="09-08-2026"> 
+            <td class="col-game">
+                
+            </td> 
+            <td class="note-label">
+                Producer:<br>
+                
+            </td> 
+            <td class="prod-container">
+                <div class="prod-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Drake Picard</span></div>
+            </td> 
+            <td class="note-label">
+                Studio 6:<br>
+                
+            </td> 
+            <td colspan="2" class="studio6-container">
+                <div class="studio6-wrapper"><span style="font-weight: normal; display: block; margin-bottom: 2px; color: rgb(204, 204, 204);">Unassigned</span></div>
+            </td> 
+             
+        </tr> <tr><td colspan="6" class="sep" data-date="09-09-2026">Wednesday, September 9</td></tr>        <tr class="daily-notes-row" data-date="09-09-2026">
+            <td class="note-label" style="text-align:center;">Daily Notes:</td>
+            <td colspan="5" class="save-text" style="text-align:left;"></td>
+            
+        </tr>        <tr data-date="09-09-2026" data-calendar="CSC-Talk Radio"> 
+            <td class="save-text col-game">CSC-Talk Radio Show</td> 
+            <td class="save-text date-input col-date" data-orig="Wed, Sep. 9th">Wed, Sep. 9th</td> 
+            <td class="save-text time-input col-start">10:06 AM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">9:06 AM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Ross Campbell</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-09-2026" data-calendar="Colorado Football Show"> 
+            <td class="save-text col-game">Buffs Prime Time (Colorado FB - TAPING)</td> 
+            <td class="save-text date-input col-date" data-orig="Wed, Sep. 9th">Wed, Sep. 9th</td> 
+            <td class="save-text time-input col-start">1:05 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">12:05 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Michael Tackett</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>                  <tr data-date="09-09-2026" data-calendar="Alabama Football Show"> 
+            <td class="save-text col-game">Hey Coach and the Kalen DeBoer Show (Alabama FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Wed, Sep. 9th">Wed, Sep. 9th</td> 
+            <td class="save-text time-input col-start">6:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">5:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Ethan Sargent</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-09-2026" data-calendar="Kansas State Football Show"> 
+            <td class="save-text col-game">Cat Chat with Collin Klein (K State FBCS)</td> 
+            <td class="save-text date-input col-date" data-orig="Wed, Sep. 9th">Wed, Sep. 9th</td> 
+            <td class="save-text time-input col-start">6:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">5:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Brett Otto</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-09-2026" data-calendar="Wisconsin Athletic Director Show"> 
+            <td class="save-text col-game">On Wisconsin with Shawn Eichorst (Wisconsin AD Show - PRE-RECORDED)</td> 
+            <td class="save-text date-input col-date" data-orig="Wed, Sep. 9th">Wed, Sep. 9th</td> 
+            <td class="save-text time-input col-start">6:05 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">5:05 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Steven A Scott</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-09-2026" data-calendar="Iowa Football Show"> 
+            <td class="save-text col-game">Hawk Talk with Kirk Ferentz (Iowa FBCS)</td> 
+            <td class="save-text date-input col-date" data-orig="Wed, Sep. 9th">Wed, Sep. 9th</td> 
+            <td class="save-text time-input col-start">6:30 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">5:30 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Morgyn Woods</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-09-2026" data-calendar="Wisconsin Football Show"> 
+            <td class="save-text col-game">Luke Fickell Radio Show (Wisconsin FB - PRE-RECORDED)</td> 
+            <td class="save-text date-input col-date" data-orig="Wed, Sep. 9th">Wed, Sep. 9th</td> 
+            <td class="save-text time-input col-start">7:05 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">6:05 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Derek Wood</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-09-2026" data-calendar="Montana State Football Show"> 
+            <td class="save-text col-game">Cat Chat with Coach Vigen (Montana State FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Wed, Sep. 9th">Wed, Sep. 9th</td> 
+            <td class="save-text time-input col-start">7:30 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">6:30 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Carson Wakeland</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-09-2026" data-calendar="Montana Football Show"> 
+            <td class="save-text col-game">The Grizzly Coaches Show (Montana FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Wed, Sep. 9th">Wed, Sep. 9th</td> 
+            <td class="save-text time-input col-start">8:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">7:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Ryan Williams</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-09-2026" data-calendar="Colorado Football Show"> 
+            <td class="save-text col-game">Buffs Prime Time (Colorado FB PRE_RECORDED)</td> 
+            <td class="save-text date-input col-date" data-orig="Wed, Sep. 9th">Wed, Sep. 9th</td> 
+            <td class="save-text time-input col-start">8:05 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">7:05 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Brett Otto</span></div>
+                <div class="op-wrapper" style="display: flex; align-items: center; margin-top: 4px;"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Serenity Blunt</span></div>
+            </td> 
+            <td class="save-text col-notes">Serenity run show</td> 
+             
+        </tr>         <tr data-date="09-09-2026" data-calendar="Wyoming Football Show"> 
+            <td class="save-text col-game">The Cowboy Football Hour with Jay Sawvel (Wyoming FBCS)</td> 
+            <td class="save-text date-input col-date" data-orig="Wed, Sep. 9th">Wed, Sep. 9th</td> 
+            <td class="save-text time-input col-start">8:07 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">7:07 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Dalton Farris</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr class="note-row" data-date="09-09-2026"> 
+            <td class="col-game">
+                
+            </td> 
+            <td class="note-label">
+                Producer:<br>
+                
+            </td> 
+            <td class="prod-container">
+                <div class="prod-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Drake Picard</span></div>
+            <div class="prod-wrapper" style="display: flex; align-items: center; margin-top: 4px;"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Tony Oneill</span></div></td> 
+            <td class="note-label">
+                Studio 6:<br>
+                
+            </td> 
+            <td colspan="2" class="studio6-container">
+                <div class="studio6-wrapper"><span style="font-weight: normal; display: block; margin-bottom: 2px; color: rgb(204, 204, 204);">Unassigned</span></div>
+            </td> 
+             
+        </tr> <tr><td colspan="6" class="sep" data-date="09-10-2026">Thursday, September 10</td></tr>        <tr class="daily-notes-row" data-date="09-10-2026">
+            <td class="note-label" style="text-align:center;">Daily Notes:</td>
+            <td colspan="5" class="save-text" style="text-align:left;"></td>
+            
+        </tr>        <tr data-date="09-10-2026" data-calendar="CSC-Talk Radio"> 
+            <td class="save-text col-game">CSC-Talk Radio Show</td> 
+            <td class="save-text date-input col-date" data-orig="Thu, Sep. 10th">Thu, Sep. 10th</td> 
+            <td class="save-text time-input col-start">10:06 AM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">9:06 AM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Michael Tackett</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-10-2026" data-calendar="Oklahoma State Football Show"> 
+            <td class="save-text col-game">The Cowboy Football Radio Show (Oklahoma State FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Thu, Sep. 10th">Thu, Sep. 10th</td> 
+            <td class="save-text time-input col-start">4:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">3:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Morgyn Woods</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-10-2026" data-calendar="Texas Tech Football Show"> 
+            <td class="save-text col-game">Red Raider Football with Joey McGuire (Texas Tech FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Thu, Sep. 10th">Thu, Sep. 10th</td> 
+            <td class="save-text time-input col-start">6:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">5:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Morgyn Woods</span></div>
+                <div class="op-wrapper" style="display: flex; align-items: center; margin-top: 4px;"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Giovanni Miller</span></div>
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-10-2026" data-calendar="Indiana Football Show"> 
+            <td class="save-text col-game">Inside IU Football with Curt Cignetti (Indiana FBCS)</td> 
+            <td class="save-text date-input col-date" data-orig="Thu, Sep. 10th">Thu, Sep. 10th</td> 
+            <td class="save-text time-input col-start">6:05 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">5:05 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Brett Otto</span></div>
+                <div class="op-wrapper" style="display: flex; align-items: center; margin-top: 4px;"><span style="font-weight: bold; display: block; margin-bottom: 2px;">CJ Herold</span></div>
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-10-2026" data-calendar="Houston Football Show"> 
+            <td class="save-text col-game">Coach Fritz Radio Show (HOU FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Thu, Sep. 10th">Thu, Sep. 10th</td> 
+            <td class="save-text time-input col-start">7:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">6:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Dan Kvist</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-10-2026" data-calendar="Oklahoma Coaches Corner Show"> 
+            <td class="save-text col-game">OU Sooner Coaches Corner Show (PRE-RECORDED)</td> 
+            <td class="save-text date-input col-date" data-orig="Thu, Sep. 10th">Thu, Sep. 10th</td> 
+            <td class="save-text time-input col-start">7:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">6:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Blaze Gilzow</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr class="note-row" data-date="09-10-2026"> 
+            <td class="col-game">
+                
+            </td> 
+            <td class="note-label">
+                Producer:<br>
+                
+            </td> 
+            <td class="prod-container">
+                <div class="prod-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Drake Picard</span></div>
+            </td> 
+            <td class="note-label">
+                Studio 6:<br>
+                
+            </td> 
+            <td colspan="2" class="studio6-container">
+                <div class="studio6-wrapper"><span style="font-weight: normal; display: block; margin-bottom: 2px; color: rgb(204, 204, 204);">Unassigned</span></div>
+            </td> 
+             
+        </tr> <tr><td colspan="6" class="sep" data-date="09-11-2026">Friday, September 11</td></tr>        <tr class="daily-notes-row" data-date="09-11-2026">
+            <td class="note-label" style="text-align:center;">Daily Notes:</td>
+            <td colspan="5" class="save-text" style="text-align:left;"></td>
+            
+        </tr>        <tr data-date="09-11-2026" data-calendar="CSC-Talk Radio"> 
+            <td class="save-text col-game">CSC-Talk Radio Show</td> 
+            <td class="save-text date-input col-date" data-orig="Fri, Sep. 11th">Fri, Sep. 11th</td> 
+            <td class="save-text time-input col-start">10:06 AM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">9:06 AM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Ross Campbell</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-11-2026" data-calendar="Louisville Football"> 
+            <td class="save-text col-game">Louisville vs. Villanova (FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Fri, Sep. 11th">Fri, Sep. 11th</td> 
+            <td class="save-text time-input col-start">4:30 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">3:30 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Ross Campbell</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-11-2026" data-calendar="Mizzou Football"> 
+            <td class="save-text col-game">Mizzou @ Kansas (FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Fri, Sep. 11th">Fri, Sep. 11th</td> 
+            <td class="save-text time-input col-start">5:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">4:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Dillon Riggs</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-11-2026" data-calendar="Kansas Crimson and Blue Show - Football"> 
+            <td class="save-text col-game">Crimson and Blue Show (Kansas FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Fri, Sep. 11th">Fri, Sep. 11th</td> 
+            <td class="save-text time-input col-start">5:30 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">4:30 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Hayden Burks</span></div>
+                
+            </td> 
+            <td class="save-text col-notes">LCI Producer Start</td> 
+             
+        </tr>         <tr data-date="09-11-2026" data-calendar="Minnesota Volleyball"> 
+            <td class="save-text col-game">Minnesota vs. Miami (VB)</td> 
+            <td class="save-text date-input col-date" data-orig="Fri, Sep. 11th">Fri, Sep. 11th</td> 
+            <td class="save-text time-input col-start">6:00 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">5:00 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Hunter Stuenkel</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>         <tr data-date="09-11-2026" data-calendar="Kansas Football"> 
+            <td class="save-text col-game">Kansas vs. Missouri (FB)</td> 
+            <td class="save-text date-input col-date" data-orig="Fri, Sep. 11th">Fri, Sep. 11th</td> 
+            <td class="save-text time-input col-start">6:30 PM</td> 
+            <td class="save-text arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;">5:30 PM</td> 
+            <td class="col-op op-container">
+                <div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Hayden Burks</span></div>
+                
+            </td> 
+            <td class="save-text col-notes"></td> 
+             
+        </tr>                  <tr data-date="09-11-2026" data-calendar="Manual Event"><td class="save-text col-game">Floater</td><td class="save-text date-input col-date" data-orig="Fri, Sep. 11th">Fri, Sep. 11th</td><td class="save-text time-input col-start">6 till breaks are done.&nbsp;</td><td class="arrival-input col-arrival" style="background:#f9f9f9; font-weight:bold;"></td><td class="col-op op-container"><div class="op-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Kale Rollins</span></div></td><td class="save-text col-notes"></td></tr><tr class="note-row" data-date="09-11-2026"> 
+            <td class="col-game">
+                
+            </td> 
+            <td class="note-label">
+                Producer:<br>
+                
+            </td> 
+            <td class="prod-container">
+                <div class="prod-wrapper"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Drake Picard</span></div>
+            <div class="prod-wrapper" style="display: flex; align-items: center; margin-top: 4px;"><span style="font-weight: bold; display: block; margin-bottom: 2px;">Tony Oneill</span></div></td> 
+            <td class="note-label">
+                Studio 6:<br>
+                
+            </td> 
+            <td colspan="2" class="studio6-container">
+                <div class="studio6-wrapper"><span style="font-weight: normal; display: block; margin-bottom: 2px; color: rgb(204, 204, 204);">Unassigned</span></div>
+            </td> 
+             
+        </tr>             </tbody> 
+        </table><script>function filterTable() { var opVal = document.getElementById('opFilter').value; var calVal = document.getElementById('calendarFilter').value; var rows = document.querySelectorAll('tbody tr'); if (!opVal && !calVal) {     rows.forEach(r => { r.style.display = ''; if (r.classList.contains('daily-notes-row')) r.style.borderTop = ''; });     return; } rows.forEach(r => r.style.display = 'none'); var datesToShow = new Set(); var isDayManager = {}; rows.forEach(r => {     var d = r.getAttribute('data-date');     if (!d) return;     if (r.classList.contains('note-row')) {         var prod = r.cells[2].innerText.trim();         var stu = r.cells[4].innerText.trim();         if (opVal && (prod.includes(opVal) || stu.includes(opVal))) {             isDayManager[d] = true;         }     } }); rows.forEach(r => {     var d = r.getAttribute('data-date');     if (!d) return;     if (!r.classList.contains('sep') && !r.classList.contains('daily-notes-row') && !r.classList.contains('note-row')) {         var opText = r.cells[4].innerText.trim();         var opsArray = opText.split('\n').map(function(s) { return s.trim(); });         var cal = r.getAttribute('data-calendar');         var opMatch = !opVal || opsArray.includes(opVal);         var calMatch = !calVal || (cal === calVal);         if (opMatch && calMatch) { datesToShow.add(d); }     } }); if (opVal) {     Object.keys(isDayManager).forEach(d => {         if (isDayManager[d]) {             if (!calVal) { datesToShow.add(d); }             else {                 var hasCalGame = Array.from(rows).some(r => r.getAttribute('data-date') === d && r.getAttribute('data-calendar') === calVal);                 if (hasCalGame) { datesToShow.add(d); }             }         }     }); } rows.forEach(r => {     var d = r.getAttribute('data-date');     if (!d || !datesToShow.has(d)) return;     if (r.classList.contains('sep') || r.classList.contains('note-row')) { r.style.display = ''; }     else if (r.classList.contains('daily-notes-row')) { r.style.display = ''; r.style.borderTop = '4px solid #2c3e50'; }     else {         var opText = r.cells[4].innerText.trim();         var opsArray = opText.split('\n').map(function(s) { return s.trim(); });         var cal = r.getAttribute('data-calendar');         var opMatch = !opVal || opsArray.includes(opVal);         var calMatch = !calVal || (cal === calVal);         if (calMatch && (opMatch || isDayManager[d])) { r.style.display = ''; }     } }); }</script></body></html>
